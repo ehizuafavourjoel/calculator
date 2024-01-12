@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    border: 1px solid white;
+    width: 80%;
+    max-width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1 0 3%;
+}
+.heading span{
+    padding: 0px 5px ;
+    background: rgba(225,225,225,0.2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.heading span:first-child {
+    background: orangered;
+}
+.answerScreen {
+    flex: 1 0 25%;
+    /* border: 1px solid white; */
+    position: relative;
+}
+.answerScreen .answerFlex {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    
+}
+.answerScreen .answerFlex textarea {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: right;
+    padding: 0 10px ;
+    outline: none;
+    overflow: hidden;
+    transition: .4s ease;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    border: none;
+    resize: none;
+
+}
+.answerScreen .answerFlex .questionInput {
+    flex: 1 0 60%;
+    font-size: 2.7rem;
+    
+}
+.answerScreen .answerFlex .answerInput {
+    flex: 1 0 40%;
+    font-size: 1.8rem;
+    color: rgb(94, 94, 94);
+}
+.answerFlex.equalClickEvent .questionInput {
+    flex: 1 0 40%;
+    font-size: 1.8rem;
+    color: rgb(94, 94, 94);
+}
+.answerFlex.equalClickEvent .answerInput {
+    flex: 1 0 60%;
+    font-size: 2.7rem;
+    color: white;
+}
+.btnContainer {
+    border-top: 1px solid rgb(156, 156, 156);
+    flex: 1 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+.btnContainer > div {
+    display: flex;
+    flex: 0 0 15%;
+    justify-content: space-around;
+}
+.orange {
+    color: rgb(255, 95, 36);
+}
+
+.btnContainer > div > div {
+    cursor: pointer;
+    font-size: 2rem;
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px 15px;
+}
+.btnContainer > div > div {
+    background-color: rgba(225,225,225,0.1);
+}
+#orangeBg {
+    background-color: rgb(255, 68, 0);
+}
+
