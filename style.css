@@ -20,13 +20,15 @@ main {
     height: 600px;
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+    overflow-x: hidden;
 }
 .heading {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex: 1 0 3%;
+    flex: 1 0 5%;
+    padding: 10px;
 }
 .heading span{
     padding: 0px 5px ;
@@ -34,58 +36,89 @@ main {
     font-size: 1.5rem;
     font-weight: 700;
     border-radius: 5px;
+    cursor: default;
+}
+.heading span:active {
+    transform: scale(0.9);
 }
 .heading span:first-child {
     background: orangered;
 }
+.heading span:last-child {
+    background: transparent;
+}
+
+.histCalcFlex {
+    flex: 1 0 85%;
+    width: 200%;
+    display: flex;
+    transition:  .4s ease;
+    
+}
+.histCalcFlex > section {
+    flex: 1 0 50%;
+    /* border: 1px solid white; */
+}
+.container.historyArea .histCalcFlex {
+    transform: translate(-50%);
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+}
 .answerScreen {
     flex: 1 0 25%;
-    /* border: 1px solid white; */
+    border: none;
     position: relative;
 }
 .answerScreen .answerFlex {
     width: 100%;
-    height: 60%;
+    height: 50%;
     position: absolute;
     bottom: 0;
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    padding: 10px 15px;
+    /* border: none; */
     
 }
 .answerScreen .answerFlex textarea {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     text-align: right;
-    padding: 0 10px ;
+    background-color: transparent;
+    padding: 0 ;
     outline: none;
     overflow: hidden;
-    transition: .4s ease;
+    transition: .1s ease;
     line-height: 1.5;
-    background-color: black;
     color: white;
     border: none;
     resize: none;
-
+    word-wrap: break-word;
 }
 .answerScreen .answerFlex .questionInput {
-    flex: 1 0 60%;
-    font-size: 2.7rem;
+    flex: 1 0 70%;
+    font-size: 2.1rem;
+    line-height: 1.5;
     
 }
 .answerScreen .answerFlex .answerInput {
-    flex: 1 0 40%;
-    font-size: 1.8rem;
+    flex: 1 0 45%;
+    font-size: 1.3rem;
+    padding: 0;
     color: rgb(94, 94, 94);
 }
 .answerFlex.equalClickEvent .questionInput {
-    flex: 1 0 40%;
-    font-size: 1.8rem;
+    flex: 1 0 45%;
+    font-size: 1rem;
     color: rgb(94, 94, 94);
 }
 .answerFlex.equalClickEvent .answerInput {
-    flex: 1 0 60%;
-    font-size: 2.7rem;
+    flex: 1 0 70%;
+    font-size: 2.1rem;
+    padding: 0 0 0px;
     color: white;
+    line-height: 1;
 }
 .btnContainer {
     border-top: 1px solid rgb(156, 156, 156);
@@ -94,18 +127,17 @@ main {
     flex-direction: column;
     justify-content: space-around;
     position: relative;
+    background: black;
 }
 .btnContainer > div {
     display: flex;
     flex: 0 0 15%;
     justify-content: space-around;
 }
-.orange {
-    color: rgb(255, 95, 36);
-}
 
-.btnContainer > div > div {
-    cursor: pointer;
+
+.btnContainer > div > input,#delBtn {
+    /* cursor: pointer; */
     font-size: 2rem;
     flex: 0 0 15%;
     display: flex;
@@ -113,11 +145,62 @@ main {
     align-items: center;
     border-radius: 50%;
     padding: 10px 15px;
+    color: white;
+    border: 1px  none;
 }
-.btnContainer > div > div {
+.btnContainer > div > input:active,#delBtn:active {
+    background: rgba(225,225,225,0.2);
+    transform: scale(0.9);
+}
+div.row1.orange input {
+    color: rgb(255, 95, 36);
+}
+div.orange input:last-child,#delBtn {
+    color: orangered;
+}
+#delBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 10px 15px 10px 10px;
+}
+.btnContainer > div > input,#delBtn {
     background-color: rgba(225,225,225,0.1);
 }
 #orangeBg {
     background-color: rgb(255, 68, 0);
 }
+.history {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.history > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    flex: 0 0 5%;
+}
+.historyContainer {
+   /* display: none; */
+   /* background-color: green; */
+    overflow: scroll;
+    flex: 1 0 100px;
+    /* height: 40px; */
+    padding: 15px 00px;
+    position: relative;
+}
+.history ul {
+    margin: 30px 10px;
+    list-style-type: none;
+}
+.history ul li:first-child {
+    font-size: 1.4rem;
+}
+.history ul li:last-child {
+    font-size: 1.1rem;
+}
+
+
 
