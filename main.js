@@ -38,9 +38,11 @@ const initApp = () => {
         navBtn.addEventListener('click', () => {
             if (navBtn.innerText === '=') {
                 container.classList.remove('historyArea')
+                navBtn.parentElement.classList.remove('hisT')
             }
             else {
                 container.classList.add('historyArea')
+                navBtn.parentElement.classList.add('hisT')
 
             }
         })

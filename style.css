@@ -46,6 +46,15 @@ main {
 }
 .heading span:last-child {
     background: transparent;
+    font-size: 0.3;
+    padding: 2px 5px;
+}
+.heading.hisT span:last-child {
+    background: orangered;
+    
+}
+.heading.hisT span:first-child {
+    background: rgba(225,225,225,0.2);
 }
 
 .histCalcFlex {
@@ -190,6 +199,9 @@ div.orange input:last-child,#delBtn {
     /* height: 40px; */
     padding: 15px 00px;
     position: relative;
+}
+.historyContainer::-webkit-scrollbar {
+    display: none;
 }
 .history ul {
     margin: 30px 10px;
