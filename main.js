@@ -60,9 +60,11 @@ const initApp = () => {
             miLastIndex === '-' ||
             miLastIndex === '÷' ||
             miLastIndex === '×' ||
-            miLastIndex === '.') {
+            miLastIndex === '.' ||
+            miLastIndex === '^') {
             let dummy = myBackMathValue.slice(0, -1)
-            let fullDummy1 = dummy + mysign;
+            let dummy2 = questionInput.value.slice(0, -1)
+            let fullDummy1 = dummy2 + mysign;
             var backFullDummy = dummy + mysign2
             console.log(backFullDummy)
             questionInput.value = fullDummy1
@@ -165,10 +167,10 @@ const initApp = () => {
                 calculate('3');
             }
             else if (btn.value === '+') {
-                signRules('+');
+                signRules('+', '+');
             }
-            else if (btn.value === '**') {
-                signRules('^');
+            else if (btn.value === '^') {
+                signRules('^', '**');
             }
             else if (btn.value === '0') {
                 calculate('0');
