@@ -66,13 +66,11 @@ const initApp = () => {
             let dummy2 = questionInput.value.slice(0, -1)
             let fullDummy1 = dummy2 + mysign;
             var backFullDummy = dummy + mysign2
-            console.log(backFullDummy)
             questionInput.value = fullDummy1
             myBackMathValue = backFullDummy
 
         }
         else {
-            console.log('clean')
             calculate(mysign, mysign2);
         }
 
@@ -104,14 +102,6 @@ const initApp = () => {
         answerInput.value = myBackMathValue
     })
     allBtns.forEach(btn => {
-        /* if (questionInput.value === '') {
-        //     console.log('f')
-        //     document.querySelector('#clear').value = 'Ac'
-        // }
-        // else {
-        //     console.log('r')
-        //     document.querySelector('#clear').value = 'c'
-         }*/
         btn.addEventListener('click', (e) => {
             //equalTo rebounce event
             document.querySelector('.answerFlex').classList.remove('equalClickEvent');
@@ -123,7 +113,6 @@ const initApp = () => {
                 myBackMathValue = ''
             }
             else if (btn.value === '%') {
-                console.log('%');
                 let myPercent = questionInput.value / 100;
                 questionInput.value = myPercent
                 answerInput.value = myPercent;
