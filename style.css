@@ -17,7 +17,7 @@ main {
     border: 1px solid white;
     width: 95%;
     max-width: 520px;
-    height: 98vh;
+    height: 98%;
     max-height: 1020px;
     display: flex;
     flex-direction: column;
