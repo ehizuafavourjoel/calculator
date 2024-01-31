@@ -15,9 +15,10 @@ body {
 }
 main {
     border: 1px solid white;
-    width: 80%;
-    max-width: 300px;
-    height: 600px;
+    width: 95%;
+    max-width: 620px;
+    height: 98vh;
+    max-height: 1020px;
     display: flex;
     flex-direction: column;
     position: relative;
