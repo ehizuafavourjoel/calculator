@@ -16,7 +16,7 @@ body {
 main {
     border: 1px solid white;
     width: 95%;
-    max-width: 620px;
+    max-width: 520px;
     height: 98vh;
     max-height: 1020px;
     display: flex;
